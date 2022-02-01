@@ -4,11 +4,31 @@ const { gql } = require("apollo-server");
 // name, description, date, category
 
 const schema = gql`
-  type Query {
+  type Task {
+    _id: ID!
     name: String
     description: String
     day: String
     category: String
+  }
+
+  input Task {
+    name: String!
+    description: String!
+    day: String!
+    category: String
+  }
+
+  type Query {
+    task: Task
+    tasks: [Tasks]
+  }
+
+  type Mutation {
+    createTask(taskInput: TaskInput): Task
+    updateTask(taskId: ID!, taskInput: TaskInput): Task
+    deleteTask(taskId: ID!): Task
+    deleteTasks: [Task!]!
   }
 `;
 
