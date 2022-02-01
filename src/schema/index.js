@@ -12,7 +12,7 @@ const schema = gql`
     category: String
   }
 
-  input Task {
+  input TaskInput {
     name: String!
     description: String!
     day: String!
@@ -20,8 +20,8 @@ const schema = gql`
   }
 
   type Query {
-    getTask: Task
-    getTasks: [Tasks]
+    getTask(taskID: ID!): Task
+    getTasks: [Task]
   }
 
   type Mutation {

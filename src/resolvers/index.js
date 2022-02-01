@@ -1,9 +1,11 @@
+const { Task } = require("../model");
+
 const resolvers = {
   Query: {
     getTask: async (_, args) => {
       try {
         const { toDoId } = args;
-        return awaTask.findById(toDoId);
+        return await Task.findById(toDoId);
       } catch (error) {
         throw new Error(error);
       }
