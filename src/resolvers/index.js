@@ -22,8 +22,10 @@ const resolvers = {
   Mutation: {
     createTask: async (_, args) => {
       try {
-        const { toDoInput } = args;
-        return await Task.create(toDoInput);
+        const { taskInput } = args;
+        console.log(taskInput);
+
+        return await Task.create(taskInput);
       } catch (error) {
         throw new Error(error);
       }
