@@ -20,8 +20,8 @@ const schema = gql`
   }
 
   type Query {
-    task: Task
-    tasks: [Tasks]
+    getTask: Task
+    getTasks: [Tasks]
   }
 
   type Mutation {
