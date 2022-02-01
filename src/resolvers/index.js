@@ -4,8 +4,8 @@ const resolvers = {
   Query: {
     getTask: async (_, args) => {
       try {
-        const { toDoId } = args;
-        return await Task.findById(toDoId);
+        const { taskID } = args;
+        return await Task.findById(taskID);
       } catch (error) {
         throw new Error(error);
       }
@@ -32,16 +32,16 @@ const resolvers = {
     },
     updateTask: async (_, args) => {
       try {
-        const { toDoId, toDoInput } = args;
-        return await Task.findOneAndUpdate(toDoId, toDoInput, { new: true });
+        const { taskId, taskInput } = args;
+        return await Task.findOneAndUpdate(taskId, taskInput);
       } catch (error) {
         throw new Error(error);
       }
     },
     deleteTask: async (_, args) => {
       try {
-        const { toDoId } = args;
-        return await Task.findByIdAndDelete(toDoId);
+        const { taskId } = args;
+        return await Task.findByIdAndDelete(taskId);
       } catch (error) {
         throw new Error(error);
       }
