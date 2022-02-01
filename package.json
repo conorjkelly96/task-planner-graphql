@@ -1,0 +1,29 @@
+{
+  "name": "to-do-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conorjkelly96/to-do-graphql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conorjkelly96/to-do-graphql/issues"
+  },
+  "homepage": "https://github.com/conorjkelly96/to-do-graphql#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.2",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
